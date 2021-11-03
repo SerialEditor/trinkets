@@ -1,0 +1,79 @@
+:root {
+    --set-size: 24vw;
+}
+body {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff;
+}
+
+.time_left, .carousel {
+    position: relative;
+    width: var(--set-size);
+    height: var(--set-size);
+    font-size: calc(var(--set-size) - 12vw);
+    line-height: var(--set-size);
+    text-align: center;
+    color: red;
+}
+
+.time_left {
+    --set-transform: 0;
+}
+
+.time_left::after {
+    position: absolute;
+    display: block;
+    content: "";
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: var(--set-size);
+    height: var(--set-size);
+    background: linear-gradient(-90deg, grey 50%, transparent 50%);
+    border: 2px solid red;
+    border-radius: 50%;
+    transform: var(--set-transform);
+    transition: transform 1s linear;
+}
+
+.carousel {
+    background: linear-gradient(-90deg, grey 50%, transparent 50%);
+    border: 2px solid red;
+    border-radius: 50%;
+    transition: transform 4s linear;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    min-height: 400px;
+}
+
+.circle {
+    width: var(--set-size);
+    max-width: 400px;
+    height: var(--set-size);
+    max-height: 400px;
+    font-size: 48px;
+    line-height: var(--set-size);
+    text-align: center; 
+    color: #fff;
+    background: radial-gradient(circle at 95% 95%, aqua, darkblue);
+    border-radius: 50%;
+    transition: transform .005s linear;
+    cursor: pointer;
+}
+
+
+
+
+
+
